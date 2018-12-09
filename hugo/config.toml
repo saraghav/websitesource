@@ -1,70 +1,67 @@
-baseURL                          = "http://saraghav.github.io/"  # Your domain name. Must end with "/"
-theme                            = "introduction"
-languageCode                     = "en-us"
-DefaultContentLanguage           = "en"                    # Default language for multilingual sites
-# disqusshortname                 = ""                       # https://gohugo.io/content-management/comments
-# googleAnalytics                 = ""                       # https://gohugo.io/templates/internal/#google-analytics
+baseurl         = "/"
+theme           = "casper-two"
+languageCode    = "en-US"
+disqusShortname = ""
+paginate        = 6
+#SectionPagesMenu = "main"
+canonifyurls    = true
 
 [params]
-    themeStyle                   = "dark"                 # Choose "light" or "dark"
-    # favicon                      = "/img/fav.ico"          # Path to favicon file
-    showRSSButton                = true                    # Show rss button in navigation
-    fadeIn                       = true                    # Turn on/off the fade-in effect
-    fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
-    dateFormat                   = "Jan 2, 2006"
-    email                        = "araghav dot s at jee mail"   # E-mail address for contact section
-    # customCSS                    = ["foo.css"]             # Include custom css files placed under assets/
+  title       = "Ananth Sridhar"
+  subtitle    = "Curious mind"
+  copyright   = "© 2018"
 
-    # Configure the home page
-    [params.home]
-        introHeight              = "medium"                 # Input either "medium" or "large" or "fullheight"
-        showLatest               = true                    # Show latest blog post summary
-        showAllPosts             = false                   # Set true to list all posts on home page, or set false to link to separate blog list page
-        numberOfProjectsToShow   = 3                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
+  cover       = "img/blog-cover.jpg"
+  description = "Anantharaghavan Sridhar's personal website."
+  metaDescription = ""
+  googleAnalytics = ""
+  customCSS = []
+  RSSLink = ""
 
-        localTime                = true                    # Show your current local time in contact section
-        timeZone                 = "America/Los_Angeles"   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-    [params.projects]
-        useTwoColumns            = false                   # Use a layout with two columns instead of three
+  # twitterName = "faketryghost"
+  # fbName = "RaghavanS"
+  githubName = "saraghav"
+  linkedinName = "AnanthRSridhar"
+  # mediumName = ""
 
-    # Share buttons on blog post pages
-    [params.share]
-        twitter                  = true
-        facebook                 = true
-        googlePlus               = true
-        pinterest                = true
+  # logo = "hugo-logo.png"
+  # orgName = "EM"
+  # orgWebsite = "https://www.telematika.org"
+  # orgDescription = "Here is a description placeholder for your org"
 
-    # Social icons appear in introduction and contact section. Add as many more as you like.
-    # Find icon names here: https://fontawesome.com/cheatsheet/
-    [[params.social]]
-        url   = "https://facebook.com/RaghavanS"
-        icon  = "facebook-f"
-    [[params.social]]
-        url   = "https://linkedin.com/in/AnanthRSridhar"
-        icon  = "linkedin-in"
+  showSupport = true
 
-# If you don't want to use the default menu, you can define one by yourself
+  author = "Ananth Sridhar"
+  authorAvatar = "img/ghost-icon.png"
+  authorLocation = "San Francisco, CA"
+  authorWebsite = "https://saraghav.github.io"
+  authorDescription = "Curious mind. Software Engineer."
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[permalinks]
+  post = "/post/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
+
 # [[menu.main]]
-#     name    = "Home"
-#     url     = "/"
-#     weight  = 0
+#   name = "Go"
+#   url = "/tags/golang/"
+#   weight = 100
+ 
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 99
+
 # [[menu.main]]
-#     name    = "Blog"
-#     url     = "/blog/"
-#     weight  = 1
+#   name = "External"
+#   url = "https://google.com/"
+#   weight = 95
 
-# We only use tag as a taxonomies
-# You can add more by yourself
-[taxonomies]
-  tag = "tags"
-
-[languages]
-    [languages.en]
-        languageName     = "English"
-        languageCode     = "en-us"
-        contentDir       = "content"
-        weight           = 0
-        title            = "Ananth's website"
-        [languages.en.params]
-            description  = "Ananth's website"               # Max 160 characters show in search results
-            footerText   = "(c) Anantharaghavan Sridhar"    # Text to override default footer text (markdown allowed)
